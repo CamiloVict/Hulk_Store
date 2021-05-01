@@ -1,8 +1,9 @@
 import {createGlobalStyle} from 'styled-components';
 
-export const GlobalStyle = createGlobalStyle`
+const GlobalStyle = createGlobalStyle`
 
-html {
+html{           height: 100%;
+                overflow: hidden;
                 box-sizing: border-box;
                 font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
         }
@@ -27,13 +28,14 @@ html {
         }
 
         body {
-                
+                margin:0;
                 background: #fefefe;
                 height: 100vh;
-                margin: 0 auto;
-                max-width: 500px;
+                margin: 0;
+                padding: 0;
                 overscroll-behavior: none;
-                width: 100%;
+                width: 100vw;
+                border: 1px solid red;
         }
 
         #app {
@@ -44,3 +46,5 @@ html {
         }
 
 `
+
+export default GlobalStyle
