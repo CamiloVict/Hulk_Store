@@ -1,19 +1,31 @@
-import React, {Fragment} from 'react'
+import React, { Fragment } from 'react'
 import { Dashboard } from '../../components/Dashboard'
-import {CardProduct} from '../../components/CardProduct'
-import {Container, SectionOne, SectionTwo} from './style'
+import { CardProduct } from '../../components/CardProduct'
+import { Input } from "baseui/input";
+import { Container, SectionOne, SectionTwo,ContainerFooter } from './style'
 
- export const Edit = () => {
+export const Edit = () => {
+    const [value, setValue] = React.useState("");
+
     return (
         <Fragment>
-           <Container>
+            <Container>
+                <Input
+                    value={value}
+                    onChange={e => setValue(e.target.value)}
+                    placeholder="Search Item"
+                    clearOnEscape
+                />
+           
+            <ContainerFooter>
                 <SectionOne>
-                    <CardProduct/>
+                    <CardProduct />
                 </SectionOne>
                 <SectionTwo>
-                    <Dashboard price="Price" type = "Type" description = "Description" action = 'Edit'/>
+                    <Dashboard price="Price" type="Type" description="Description" action='Edit' />
                 </SectionTwo>
-           </Container>
+            </ContainerFooter>
+        </Container>
         </Fragment>
     )
 }
