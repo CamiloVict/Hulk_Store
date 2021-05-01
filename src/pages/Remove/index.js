@@ -4,7 +4,7 @@ import {TablePrice} from '../../components/Table'
 
 import {Container, SectionOne, SectionTwo} from './style'
 
- export const Add = () => {
+ export const Remove = () => {
     return (
         <Fragment>
            <Container>
@@ -12,7 +12,7 @@ import {Container, SectionOne, SectionTwo} from './style'
                     <TablePrice />
                 </SectionOne>
                 <SectionTwo>
-                    <Dashboard price="Price" type = "Type" description = "Description"/>
+                    <Dashboard price="Price" type = "Type" description = "Description" action = 'Remove'/>
                 </SectionTwo>
            </Container>
         </Fragment>

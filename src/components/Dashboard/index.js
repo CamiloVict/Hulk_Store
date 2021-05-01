@@ -40,7 +40,7 @@ export const Dashboard = (props) => {
         onClick={() => alert("click")}
         shape={SHAPE.pill}
         >
-        Add
+        {props.action}
         </Button>
         </Form>
         
