@@ -6,6 +6,9 @@ import GlobalStyles from './styles/GlobalStyles';
 
 import {Product} from './components/Product/index'
 import {Navbar} from './components/Navbar/index'
+import { TablePrice } from './components/Table';
+import {Layout} from './components/Layout/index';
+import Home from './pages/Home/Home';
 
 
 const theme = createTheme(primitives, overrides);
@@ -42,8 +45,9 @@ function App () {
         <BaseProvider theme={theme}>
             <Fragment>
                 <GlobalStyles/>
-                <Navbar />
-                <Product />
+                <Layout>  
+                  <Home />
+                </Layout>
             </Fragment> 
         </BaseProvider>
         </StyletronProvider>      

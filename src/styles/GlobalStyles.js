@@ -35,7 +35,7 @@ html{           height: 100%;
                 padding: 0;
                 overscroll-behavior: none;
                 width: 100vw;
-                border: 1px solid red;
+                
         }
 
         #app {
