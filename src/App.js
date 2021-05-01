@@ -4,11 +4,10 @@ import { Provider as StyletronProvider } from 'styletron-react';
 import { createTheme, BaseProvider } from 'baseui';
 import GlobalStyles from './styles/GlobalStyles';
 
-import {Product} from './components/Product/index'
-import {Navbar} from './components/Navbar/index'
-import { TablePrice } from './components/Table';
+
 import {Layout} from './components/Layout/index';
-import Home from './pages/Home/Home';
+import {Add} from './pages/Add/index'
+import Home from './pages/Home/index';
 
 
 const theme = createTheme(primitives, overrides);
@@ -46,7 +45,7 @@ function App () {
             <Fragment>
                 <GlobalStyles/>
                 <Layout>  
-                  <Home />
+                  <Add />
                 </Layout>
             </Fragment> 
         </BaseProvider>

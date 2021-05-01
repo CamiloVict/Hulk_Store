@@ -1,9 +1,10 @@
 import React, {Fragment} from 'react'
+import { Dashboard } from '../../components/Dashboard'
 import {TablePrice} from '../../components/Table'
 
 import {Container, SectionOne, SectionTwo} from './style'
 
-const Home = () => {
+ export const Add = () => {
     return (
         <Fragment>
            <Container>
@@ -11,11 +12,14 @@ const Home = () => {
                     <TablePrice />
                 </SectionOne>
                 <SectionTwo>
-                    <TablePrice />
+                    <Dashboard price="Price" type = "Type" description = "Description"/>
                 </SectionTwo>
            </Container>
         </Fragment>
     )
 }
 
-export default Home
+
+
+
+

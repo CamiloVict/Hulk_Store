@@ -8,7 +8,7 @@ import {
  import {StyledLink as Link} from 'baseui/link';
  import {StatefulSelect as Search, TYPE} from 'baseui/select';
 
-import {NavbarStyle,Img, Input} from './styles'
+
 
 
 const options = {
