@@ -4,7 +4,7 @@ import {TablePrice} from '../../components/Table'
 
 import {Container, SectionOne} from './style'
 
-const Home = () => {
+export const Home = () => {
     return (
         <Fragment>
            <Container>
@@ -17,4 +17,4 @@ const Home = () => {
     )
 }
 
-export default Home
+

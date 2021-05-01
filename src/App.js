@@ -1,13 +1,17 @@
 import React, {Fragment} from 'react';
+import { Router} from "@reach/router"
+
 import { Client as Styletron } from 'styletron-engine-atomic';
 import { Provider as StyletronProvider } from 'styletron-react';
 import { createTheme, BaseProvider } from 'baseui';
+
 import GlobalStyles from './styles/GlobalStyles';
 
 
 import {Layout} from './components/Layout/index';
 import {Add} from './pages/Add/index'
-import Home from './pages/Home/index';
+import {Home} from './pages/Home/index';
+import {Remove} from  './pages/Remove/index'
 
 
 const theme = createTheme(primitives, overrides);
@@ -45,7 +49,12 @@ function App () {
             <Fragment>
                 <GlobalStyles/>
                 <Layout>  
-                  <Add />
+                  <Router>
+                    <Home exact path = '/' />
+                    <Home exact path = '/home' />
+                    <Add exact path = '/add' />
+                    <Remove exact path = '/remove' />
+                  </Router>
                 </Layout>
             </Fragment> 
         </BaseProvider>

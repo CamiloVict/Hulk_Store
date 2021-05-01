@@ -2,13 +2,13 @@ import React from 'react'
 import {
    HeaderNavigation,
    ALIGN,
-   StyledNavigationItem as NavigationItem,
-   StyledNavigationList as NavigationList,
+  StyledNavigationItem as NavigationItem,
+    StyledNavigationList as NavigationList,
  } from 'baseui/header-navigation';
- import {StyledLink as Link} from 'baseui/link';
+//  import {StyledLink as Link} from 'baseui/link';
  import {StatefulSelect as Search, TYPE} from 'baseui/select';
 
-
+import {NavbarStyle,Link} from './styles'
 
 
 const options = {
@@ -25,6 +25,7 @@ const options = {
 
  export const Navbar = () => {
     return (
+      <NavbarStyle>
       <HeaderNavigation>
       <NavigationList $align={ALIGN.left}>
         <NavigationItem>Marvel</NavigationItem>
@@ -32,7 +33,17 @@ const options = {
       <NavigationList $align={ALIGN.center} />
       <NavigationList $align={ALIGN.right}>
         <NavigationItem>
-          <Link href="#search-link1">Edit</Link>
+          {/* <Link href ={"/"}>Home</Link> */}
+          <Link to = '/'>Home</Link>
+        </NavigationItem>
+        <NavigationItem>
+          <Link to='/add'>Add</Link>
+        </NavigationItem>
+        <NavigationItem>
+          <Link to='/remove'>Remove</Link>
+        </NavigationItem>
+        <NavigationItem>
+          <Link to='/edit'>Edit</Link>
         </NavigationItem>
       </NavigationList>
       <NavigationList $align={ALIGN.right}>
@@ -46,6 +57,7 @@ const options = {
         </NavigationItem>
       </NavigationList>
     </HeaderNavigation>
+      </NavbarStyle>
     )
 }
 
