@@ -8,7 +8,6 @@ export const Dashboard = (props) => {
     
     const [value, setValue] = useState('');
     
-    
     return (
         <Form>
         <Inputs>
@@ -35,7 +34,7 @@ export const Dashboard = (props) => {
             endEnhancer=".00"
             />
         </Inputs>
-        
+         
         <Button
         onClick={() => alert("click")}
         shape={SHAPE.pill}

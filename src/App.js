@@ -12,6 +12,7 @@ import {Layout} from './components/Layout/index';
 import {Add} from './pages/Add/index'
 import {Home} from './pages/Home/index';
 import {Remove} from  './pages/Remove/index'
+import {Edit} from './pages/Edit/index'
 
 
 const theme = createTheme(primitives, overrides);
@@ -54,6 +55,7 @@ function App () {
                     <Home exact path = '/home' />
                     <Add exact path = '/add' />
                     <Remove exact path = '/remove' />
+                    <Edit exact path = '/edit' />
                   </Router>
                 </Layout>
             </Fragment> 
