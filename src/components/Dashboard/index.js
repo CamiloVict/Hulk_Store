@@ -1,42 +1,56 @@
-import React, {Fragment, useState} from 'react';
+import React, {useState} from 'react';
 import {Input} from 'baseui/input';
 import {Form,Inputs} from './style'
 import { Button, SHAPE } from "baseui/button";
-
+import {DATA} from '../../utils/data'
 
 export const Dashboard = (props) => {
     
-    const [value, setValue] = useState('');
+    const useInputValue = initialValue => {
+        const [value, SetValue] = useState(initialValue)
+        const onChange = e => SetValue(e.target.value.toLoweCase())
+
+        return [value, onChange]
+    }
     
+   
+
+    const type = useInputValue('');
+    const description = useInputValue('');
+    const price = useInputValue('');
+
     return (
         <Form>
         <Inputs>
             <Input
-            value={value}
-            onChange={event => setValue(event.currentTarget.value)}
+            name= 'type'
+            value={type.value}
+            onChange={type.onChange}
             placeholder={props.type}
             />
         </Inputs>
 
         <Inputs>
             <Input
-            value={value}
-            onChange={event => setValue(event.currentTarget.value)}
+            name= 'description'
+            value={description.value}
+            onChange={description.onChange}
             placeholder={props.description}
             />
         </Inputs>
         
         <Inputs>
             <Input
-            value={value}
-            onChange={event => setValue(event.currentTarget.value)}
+            name= 'price'
+            value={price.value}
+            onChange={price.onChange}
             placeholder={props.price}
             endEnhancer=".00"
             />
         </Inputs>
          
         <Button
-        onClick={() => alert("click")}
+        onClick = {()=>{console.log('was clicked')}}
         shape={SHAPE.pill}
         >
         {props.action}

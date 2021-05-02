@@ -11,8 +11,9 @@ import GlobalStyles from './styles/GlobalStyles';
 import {Layout} from './components/Layout/index';
 import {Add} from './pages/Add/index'
 import {Home} from './pages/Home/index';
-import {Remove} from  './pages/Remove/index'
-import {Edit} from './pages/Edit/index'
+import {Remove} from  './pages/Remove/index';
+import {Edit} from './pages/Edit/index';
+import {COLUMNS,DATA} from './utils/data';
 
 
 const theme = createTheme(primitives, overrides);
@@ -43,19 +44,20 @@ const primitives = {
     },
   };
 
-function App () {
-    return (
-        <StyletronProvider value={engine}>
+function App (props) {
+  const data = props.data;
+  return (
+    <StyletronProvider value={engine}>
         <BaseProvider theme={theme}>
             <Fragment>
                 <GlobalStyles/>
                 <Layout>  
                   <Router>
-                    <Home exact path = '/' />
-                    <Home exact path = '/home' />
-                    <Add exact path = '/add' />
-                    <Remove exact path = '/remove' />
-                    <Edit exact path = '/edit' />
+                    <Home data = {data}  exact path = '/' />
+                    <Home data = {data}  exact path = '/home' />
+                    <Add data = {data} exact path = '/add' />
+                    <Remove data = {data}  exact path = '/remove' />
+                    <Edit data = {data}  exact path = '/edit' />
                   </Router>
                 </Layout>
             </Fragment> 

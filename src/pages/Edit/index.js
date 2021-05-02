@@ -4,7 +4,7 @@ import { CardProduct } from '../../components/CardProduct'
 import { Input } from "baseui/input";
 import { Container, SectionOne, SectionTwo,ContainerFooter } from './style'
 
-export const Edit = () => {
+export const Edit = (props) => {
     const [value, setValue] = React.useState("");
 
     return (
@@ -19,7 +19,7 @@ export const Edit = () => {
            
             <ContainerFooter>
                 <SectionOne>
-                    <CardProduct />
+                    <CardProduct data = {props.data}/>
                 </SectionOne>
                 <SectionTwo>
                     <Dashboard price="Price" type="Type" description="Description" action='Edit' />

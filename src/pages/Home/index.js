@@ -4,12 +4,12 @@ import {TablePrice} from '../../components/Table'
 
 import {Container, SectionOne} from './style'
 
-export const Home = () => {
+export const Home = (props) => {
     return (
         <Fragment>
            <Container>
                 <SectionOne>
-                    <TablePrice />
+                    <TablePrice data = {props.data}/>
                 </SectionOne>
                 
            </Container>

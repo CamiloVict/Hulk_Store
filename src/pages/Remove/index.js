@@ -4,12 +4,12 @@ import {TablePrice} from '../../components/Table'
 
 import {Container, SectionOne, SectionTwo} from './style'
 
- export const Remove = () => {
+ export const Remove = (props) => {
     return (
         <Fragment>
            <Container>
                 <SectionOne>
-                    <TablePrice />
+                    <TablePrice data = {props.data}/>
                 </SectionOne>
                 <SectionTwo>
                     <Dashboard price="Price" type = "Type" description = "Description" action = 'Remove'/>
