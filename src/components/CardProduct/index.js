@@ -1,7 +1,7 @@
 import React from 'react'
 import {Card, StyledBody} from 'baseui/card';
 
-import {Container,Footer} from './style'
+import {Container,Footer, Title,SubTitle,Description,FooterItem} from './style'
 
 export const CardProduct = (props) => {
   console.dir(props)
@@ -9,12 +9,12 @@ export const CardProduct = (props) => {
         <Card overrides={{Root: {style: {width: '328px'}}}}>
       <StyledBody>
         <Container>
-        <h1>{props.data[3]}</h1>
-        <h2>{props.data[1]}</h2>
-        <p>{props.data[2]}</p>
+        <Title>{props.data[1].[0]}</Title>
+        <SubTitle>{props.data[1].[2]}</SubTitle>
+        <Description>{props.data[1].[1]}</Description>
         <Footer>
-            <p>{props.data[4]}</p>
-            <p>{props.data[5]}</p>
+            <FooterItem>{props.data[1].[3]}</FooterItem>
+            <FooterItem>{props.data[1].[1]}</FooterItem>
         </Footer>
         </Container>
       </StyledBody>
