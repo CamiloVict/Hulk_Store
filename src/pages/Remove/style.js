@@ -7,7 +7,6 @@ justify-content: space-around;
 align-items: center;
 padding: 20px;
 margin: 5px;
-height:calc(100vh-50px);
 `
 
 export const SectionOne = styled.div`

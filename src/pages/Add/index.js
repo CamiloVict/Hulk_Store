@@ -11,7 +11,7 @@ import {Container, SectionOne, SectionTwo} from './style'
         const [value, setValue] = useState('')
         
         const onChange = e => {
-            setValue([e.target.name] = e.target.value)
+            setValue(e.target.value)
             console.log(e.target.value)
             return {value, onChange}   
         }
