@@ -4,15 +4,16 @@ import { CardProduct } from '../../components/CardProduct'
 import { Input } from "baseui/input";
 import { Container, SectionOne, SectionTwo,ContainerFooter } from './style'
 
+import {useInputValue} from '../../hooks/useInputValue'
+
 export const Edit = (props) => {
-    const [value, setValue] = React.useState("");
+    const searchInput = useInputValue('')
 
     return (
         <Fragment>
             <Container>
                 <Input
-                    value={value}
-                    onChange={e => setValue(e.target.value)}
+                    {...searchInput}
                     placeholder="Search Item"
                     clearOnEscape
                 />
@@ -22,7 +23,7 @@ export const Edit = (props) => {
                     <CardProduct data = {props.data}/>
                 </SectionOne>
                 <SectionTwo>
-                    <Dashboard price="Price" type="Type" description="Description" action='Edit' />
+                <Dashboard name="Name" reference = "Reference" price="Price" type = "Type" description = "Description" quantity = "Quantity" toggleAction = 'Edit'/>
                 </SectionTwo>
             </ContainerFooter>
         </Container>

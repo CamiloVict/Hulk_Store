@@ -10,8 +10,7 @@ export const Home = (props) => {
            <Container>
                 <SectionOne>
                     <TablePrice data = {props.data}/>
-                </SectionOne>
-                
+                </SectionOne> 
            </Container>
         </Fragment>
     )

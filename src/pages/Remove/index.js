@@ -12,7 +12,7 @@ import {Container, SectionOne, SectionTwo} from './style'
                     <TablePrice data = {props.data}/>
                 </SectionOne>
                 <SectionTwo>
-                    <Dashboard price="Price" type = "Type" description = "Description" action = 'Remove'/>
+                <Dashboard name="Name" reference = "Reference" price="Price" type = "Type" description = "Description" quantity = "Quantity" toggleAction = 'Remove'/>
                 </SectionTwo>
            </Container>
         </Fragment>

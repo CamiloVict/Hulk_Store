@@ -2,58 +2,65 @@ import React, {useState} from 'react';
 import {Input} from 'baseui/input';
 import {Form,Inputs} from './style'
 import { Button, SHAPE } from "baseui/button";
-import {DATA} from '../../utils/data'
 
 export const Dashboard = (props) => {
     
-    const useInputValue = initialValue => {
-        const [value, SetValue] = useState(initialValue)
-        const onChange = e => SetValue(e.target.value.toLoweCase())
-
-        return [value, onChange]
-    }
     
-   
-
-    const type = useInputValue('');
-    const description = useInputValue('');
-    const price = useInputValue('');
-
+    // const name = useInputValue('');
+    // const description = useInputValue('');
+    // const reference = useInputValue('');
+    // const price = useInputValue('');
+    // const quantity = useInputValue('');
+    
     return (
         <Form>
         <Inputs>
             <Input
-            name= 'type'
-            value={type.value}
-            onChange={type.onChange}
-            placeholder={props.type}
+            //  {...name}
+            name = 'name'
+            onChange={props.onChange}
+            placeholder={props.name}
+            />
+        </Inputs>
+        <Inputs>
+            <Input
+            // {...description}
+            name= 'description'
+            onChange={props.onChange}
+            placeholder={props.description}
             />
         </Inputs>
 
         <Inputs>
             <Input
-            name= 'description'
-            value={description.value}
-            onChange={description.onChange}
-            placeholder={props.description}
+            name= 'reference'
+            onChange={props.onChange}
+            placeholder={props.reference}
+            />
+        </Inputs>
+
+        <Inputs>
+            <Input
+            name= 'quantity'
+            onChange={props.onChange}
+            placeholder={props.quantity}
             />
         </Inputs>
         
         <Inputs>
             <Input
             name= 'price'
-            value={price.value}
-            onChange={price.onChange}
+            onChange={props.onChange}
             placeholder={props.price}
             endEnhancer=".00"
             />
         </Inputs>
          
-        <Button
-        onClick = {()=>{console.log('was clicked')}}
+        <Button type = "button"
+        onClick = {() => console.log('click')}
         shape={SHAPE.pill}
         >
-        {props.action}
+        {props.toggleAction}
         </Button>
         </Form>
         
